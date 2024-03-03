@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watches-Bikes & Detectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href="website.html">Watches-Bikes & Detectors</a>
+                <!-- this is for the the logo you can place an img here -->
+            </div>
+
+            <nav>
+                <ul id= "MenuItems">
+                    <!-- 
+                    <li> <a href="#">Home</a> </li>   
+                    <li> <a href="#"> Bikes</a></li>
+                    <li> <a href="#"> Watches</a></li>
+                    <li> <a href="#"> Metal Detecturs</a></li>
+                   <li> <a href="#"> Contact</a></li> 
+                   <li> <button class='loginbtn' onclick="document.getElementById('login-form').style.display ='block'" style="width:auto">Login</button></li>
+                   
+                   -->
+                   <li> <button type='submit' onclick=showHome() style="width:auto"> Home</button></li>
+                   <li> <button type='submit' onclick=showBikes() style="width:auto"> Bikes</button></li>
+                   <li> <button type='submit' onclick=showWatches() style="width:auto"> watches</button></li>
+                   <li> <button type='submit' onclick=showMetalDetecturs() style="width:auto"> Metal Detecturs</button></li>
+                    <li> <button type='submit' onclick=showContact() style="width:auto"> Contact</button></li>
+                    <li> <button  type= 'submit' onclick=showLogin() style="width:auto">Login</button></li> 
+                    
+
+                </ul>
+            </nav>
+            <!-- navigation bar is finish lets run and see -->
+            <!-- now let us make thne styling for navigation bar -->
+    
+        </div > 
+ <!-- Cette påarti de mon code concerne le changement de display dans le menu.. -->
+
+<script>
+          
+            function showHome() {
+                        
+                document.getElementById('home-form').style.display = "block";                       
+                        document.getElementById('bikes-form').style.display = "none";
+                        document.getElementById('watches-form').style.display = "none";
+                        document.getElementById('detectors-form').style.display = "none";
+                        document.getElementById('contact-form').style.display = "none";
+                        document.getElementById('login-form').style.display = "none";
+
+            }
+        
+            function showBikes() {
+                document.getElementById('bikes-form').style.display = "block";       
+                        document.getElementById('home-form').style.display = "none";                                              
+                        document.getElementById('watches-form').style.display = "none";
+                        document.getElementById('detectors-form').style.display = "none";
+                        document.getElementById('contact-form').style.display = "none";
+                        document.getElementById('login-form').style.display = "none";
+
+            }
+            function showWatches() {
+                document.getElementById('watches-form').style.display = "block";
+                        document.getElementById('home-form').style.display = "none";                       
+                        document.getElementById('bikes-form').style.display = "none";
+                        document.getElementById('detectors-form').style.display = "none";
+                        document.getElementById('contact-form').style.display = "none";
+                        document.getElementById('login-form').style.display = "none";
+                        
+            }
+            function showMetalDetecturs() {
+                document.getElementById('detectors-form').style.display = "block";
+                        document.getElementById('home-form').style.display = "none";                       
+                        document.getElementById('bikes-form').style.display = "none";
+                        document.getElementById('watches-form').style.display = "none";
+                        document.getElementById('contact-form').style.display = "none";
+                        document.getElementById('login-form').style.display = "none";
+            }
+            function showContact() {
+                document.getElementById('contact-form').style.display = "block";
+                        document.getElementById('home-form').style.display = "none";                       
+                        document.getElementById('bikes-form').style.display = "none";
+                        document.getElementById('watches-form').style.display = "none";
+                        document.getElementById('detectors-form').style.display = "none";
+                        document.getElementById('login-form').style.display = "none";
+                
+            }
+            function showLogin() {
+                document.getElementById('login-form').style.display = "block";
+                        document.getElementById('home-form').style.display = "none";                       
+                        document.getElementById('bikes-form').style.display = "none";
+                        document.getElementById('watches-form').style.display = "none";
+                        document.getElementById('detectors-form').style.display = "none";
+                        document.getElementById('contact-form').style.display = "none";
+             
+            }
+
+        </script>
+
+      <!-- CContact-->
+        <!-- Ce contenus correspond au menu Contact et tout le disign qui va avec ... -->
+        <div id='contact-form' class="contact-page">
+
+            <div class=" fm-box">
+                <div class='but-box'>
+                    <div id='btc'></div>
+                        <button type='button' onclick='kund_service()' class=' toggle-btc'>Support</button>
+                        <button type='button' onclick='tecknique_support()' class=' toggle-btc'>Tech </button>
+                </div>
+                <form id="kund_s"  class="social">
+                    
+                    <h2 id=" h2"> Dail those numbers för : </h2>
+                    
+                        <li> Reclamation: 0737204470</li>
+                        
+
+                        <li> Email address: MBW@contact.se</address></li>
+                    
+                    <br>
+                    
+                    
+                        <li> Tchechnique Support: 07272954470</li>
+                        
+
+                        <li> Email address: tech_support@contact.se </address></li>
+                    
+                   
+                </form>
+
+
+            </div>
+                <!-- La fin du contenus  Contact et tout le disign qui va avec ... -->
+        </div>
+
+        <script>
+            var a=document.getElementById('kund_s');
+                var b=document.getElementById('tech_s');
+                var c=document.getElementById('btc');
+    
+                function kund_service(){
+                    a.style.left='-400px';
+                    b.style.left='50px';
+                    c.style.left='110px';
+                }
+                function tecknique_support(){
+                    a.style.left='50px';
+                    b.style.left='450px';
+                    c.style.left='0';
+                }
+    
+        </script>
+        <!-- this code is for the when you click out the kund  or tech page the form -box disapears-->
+
+        <script>
+            var mod = document.getElementById('contact-form');
+            window.onclick = function(event){
+                if(event.target == mod){
+                    modal.style.display = "none";
+                }
+            }
+        
+        </script>
+       
+
+ <!-- login-->
+        <div id='login-form' class='login-page'>
+
+            <!--  creating the from-box -->
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                        <button type='button' onclick='login()' class=' toggle-btn'>Login</button>
+                        <button type='button' onclick='register()' class=' toggle-btn'>Register</button>
+                </div>
+
+                <!-- Creationg login -->
+                <form id ='login' class = 'input-group-login'>
+
+                            <input type='text' class='input-filed' placeholder='Enter your email address' required>
+                            <input type='password' class='input-filed' placeholder='Enter your password' required>
+                            <input type='checkbox' class='check-box'><span>Remember Password</span>
+                            <button type='submit' class='submit-btn'>Log in</button>
+                    
+                </form>
+
+
+                <!-- Creating the  registration form--->
+                <form id='register' class=' input-group-register'>
+
+                        <input type='text' class='input-filed' placeholder='Enter First Name' required>
+
+                        <input type='text' class='input-filed' placeholder='Enter Last Name' required>
+
+                        <input type='text' class='input-filed' placeholder='Enter Phone Number' required>
+
+                        <input type='email' class='input-filed' placeholder='Enter Email address' required>
+                    
+                        <input type='password' class='input-filed' placeholder='Enter Password'  required>
+
+                        <input type='password' class='input-filed' placeholder='Comfirm Password' required>
+
+                        <input type='checkbox' clas='check-box'><span>I agree to the terms and conditions</span>
+
+                        <button type='submit' class='submit-btn'> Register</button>
+    
+                </form>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+    <!-- the first script code is for login and registration form to movecorrectly-->
+
+    <script>
+        var x=document.getElementById('login');
+            var y=document.getElementById('register');
+            var z=document.getElementById('btn');
+
+            function register(){
+                x.style.left='-400px';
+                y.style.left='50px';
+                z.style.left='110px';
+            }
+            function login(){
+                x.style.left='50px';
+                y.style.left='450px';
+                z.style.left='0px';
+            }
+
+    </script>
+    <!-- this code is for the when you click out the login or register page the form -box disapears-->
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+    
+
+  
+</body>
+
+</html>
